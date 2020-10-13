@@ -1,5 +1,4 @@
-<h1 class="title"> Blog Posts <h1>
-
+<% content_for :page_title, "Index" %>
 <section class="section">
     <div class="container">
         <% @posts.each do |post| %>
@@ -8,7 +7,7 @@
                 <div class="media">
                     <div class="media-content">
                         <p class="title is-4">
-                            <%= post.title %>
+                            <%= link_to post.title, post %>
                         </p>
                     </div>
                 </div>
